@@ -1,0 +1,43 @@
+name: Update BitTorrent Tracker List Data
+
+on:
+  schedule:
+    - cron: '*/59 * * * *'  # Run every 59 minutes
+  workflow_dispatch:  # Allow manual trigger
+
+env:
+  TRACKERLIST_ALL: ${{ secrets.TRACKERLIST_ALL }}
+  TRACKERLIST_ALL_HTTP: ${{ secrets.TRACKERLIST_ALL_HTTP }}
+  TRACKERLIST_ALL_HTTPS: ${{ secrets.TRACKERLIST_ALL_HTTPS }}
+  TRACKERLIST_ALL_I2P: ${{ secrets.TRACKERLIST_ALL_I2P }}
+  TRACKERLIST_ALL_IP: ${{ secrets.TRACKERLIST_ALL_IP }}
+  TRACKERLIST_ALL_UDP: ${{ secrets.TRACKERLIST_ALL_UDP }}
+  TRACKERLIST_ALL_WS: ${{ secrets.TRACKERLIST_ALL_WS }}
+  TRACKERLIST_BEST: ${{ secrets.TRACKERLIST_BEST }}
+  TRACKERLIST_BEST_IP: ${{ secrets.TRACKERLIST_BEST_IP }}
+  TRACKERLIST_BLACKLIST: ${{ secrets.TRACKERLIST_BLACKLIST }}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Update
+        run: bash tracker-list.sh
+        
+      - name: Force add and commit
+        run: |
+          git config --local user.email "scriptzteam@gmail.com"
+          git config --local user.name "scriptzteam"
+          git add -A
+          git status
+          if git status --porcelain | grep -q '^?? \|^A  \|^M  '; then
+            echo "Changes detected, committing..."
+            git commit -m "Update"
+            git push
+          else
+            echo "No changes to commit"
+          fi
