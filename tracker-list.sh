@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
 
-wget -c $TRACKERLIST_ALL
-wget -c $TRACKERLIST_ALL_HTTP
-wget -c $TRACKERLIST_ALL_HTTPS
-wget -c $TRACKERLIST_ALL_I2P
-wget -c $TRACKERLIST_ALL_IP
-wget -c $TRACKERLIST_ALL_UDP
-wget -c $TRACKERLIST_ALL_WS
-wget -c $TRACKERLIST_BEST
-wget -c $TRACKERLIST_BEST_IP
-wget -c $TRACKERLIST_BLACKLIST
+current_datetime=$(date "+%Y-%m-%d %H:%M:%S")
 
+rm -rf *.txt
 rm -rf *.txt.*
+
+wget $TRACKERLIST_ALL
+wget $TRACKERLIST_ALL_HTTP
+wget $TRACKERLIST_ALL_HTTPS
+wget $TRACKERLIST_ALL_I2P
+wget $TRACKERLIST_ALL_IP
+wget $TRACKERLIST_ALL_UDP
+wget $TRACKERLIST_ALL_WS
+wget $TRACKERLIST_BEST
+wget $TRACKERLIST_BEST_IP
+wget $TRACKERLIST_BLACKLIST
+
+echo "$current_datetime" > updated.txt
