@@ -16,4 +16,6 @@ wget $TRACKERLIST_BEST
 wget $TRACKERLIST_BEST_IP
 wget $TRACKERLIST_BLACKLIST
 
+sed -i '/^[[:space:]]*$/d' *.txt
+
 echo "$current_datetime" > updated.txt
