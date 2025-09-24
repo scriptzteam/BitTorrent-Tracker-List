@@ -9,6 +9,7 @@ http://tracker.zhuqiy.top:80/announce
 http://tracker.xiaoduola.xyz:6969/announce
 http://tracker.waaa.moe:6969/announce
 http://tracker.vanitycore.co:6969/announce
+http://tracker.valete.tf:9999/announce
 http://tracker.sbsub.com:2710/announce
 http://tracker.renfei.net:8080/announce
 http://tracker.qu.ax:6969/announce
@@ -40,6 +41,7 @@ http://open.trackerlist.xyz:80/announce
 http://ipv4.rer.lol:2710/announce
 http://home.yxgz.club:6969/announce
 http://extracker.dahrkael.net:6969/announce
+http://bvarf.tracker.sh:2086/announce
 http://buny.uk:6969/announce
 http://bt1.xxxxbt.cc:6969/announce
 http://bt.poletracker.org:2710/announce
@@ -47,7 +49,4 @@ http://bittorrent-tracker.e-n-c-r-y-p-t.net:1337/announce
 http://0d.kebhana.mx:443/announce
 http://0123456789nonexistent.com:80/announce
 http://tracker1.itzmx.com:8080/announce
-http://tracker.valete.tf:9999/announce
-http://tracker.dler.org:6969/announce
 http://ch3oh.ru:6969/announce
-http://bvarf.tracker.sh:2086/announce
