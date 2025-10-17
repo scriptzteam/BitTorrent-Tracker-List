@@ -1,9 +1,10 @@
 udp://tracker.opentrackr.org:1337/announce
 udp://open.demonoid.ch:6969/announce
 udp://open.demonii.com:1337/announce
-udp://open.stealth.si:80/announce
 udp://tracker.torrent.eu.org:451/announce
+udp://open.stealth.si:80/announce
 udp://explodie.org:6969/announce
+udp://tracker.theoks.net:6969/announce
 udp://yuki.bt.bontal.net:6969/announce
 udp://wepzone.net:6969/announce
 udp://udp.tracker.projectk.org:23333/announce
@@ -17,4 +18,3 @@ udp://tracker.torrust-demo.com:6969/announce
 udp://tracker.therarbg.to:6969/announce
 udp://tracker.startwork.cv:1337/announce
 udp://tracker.srv00.com:6969/announce
-udp://tracker.qu.ax:6969/announce
