@@ -10,4 +10,5 @@ https://tracker.bt4g.com:443/announce
 https://tr.nyacat.pw:443/announce
 https://t.213891.xyz:443/announce
 https://pybittrack.retiolus.net:443/announce
+https://open.ftorrent.com:443/announce
 https://http1.torrust-tracker-demo.com:443/announce
